@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    tty: true
+    volumes:
+      - .mongodata:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
